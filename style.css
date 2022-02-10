@@ -1,4 +1,26 @@
-body{
+:root {
+    --main-bg-color: brown;
+    --main-text-color:yellow;
+}
+
+body {
     margin: 0;
     padding: 0;
+    background-color: var(--main-bg-color);
 }
+.two {
+    --test: 10px;
+}
+
+.three {
+    --test: 2em;
+    /*其实就是重新覆盖上层的属性*/
+}
+.four{
+    --four-text-clor:red
+}
+/*在这个情况下， var(--test) 的结果分别是：*/
+/*对于元素 class="two" ：10px*/
+/*对于元素 class="three" ：2em*/
+/*对于元素 class="four" ：10px （继承自父属性）*/
+/*对于元素 class="one" ：非法值，会变成自定义属性的默认值*/

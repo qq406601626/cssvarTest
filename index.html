@@ -6,6 +6,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="one">
+    <div class="two">
+        <div class="three"></div>
+        <div class="four" style="--my-var:red;color:var(--main-text-color)">1111</div>
+    </div>
+</div>
 </body>
+<script>
+    // 获取一个 Dom 节点上的 CSS 变量
+    element.style.getPropertyValue("--my-var");
+
+    // 获取任意 Dom 节点上的 CSS 变量
+    getComputedStyle(element).getPropertyValue("--my-var");
+
+    // 修改一个 Dom 节点上的 CSS 变量
+    element.style.setProperty("--my-var", jsVar + 4);
+</script>
 </html>
